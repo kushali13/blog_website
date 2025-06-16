@@ -4,13 +4,11 @@
 #gmail- kushalisanghvi1311@gmail.com
 #app password - xlmk arta frhc maej
 # user-Tester1 , password- test4321
-"""Django's command-line utility for administrative tasks."""
 import os
 import sys
 
 
 def main():
-    """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
     try:
         from django.core.management import execute_from_command_line
