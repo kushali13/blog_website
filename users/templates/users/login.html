@@ -1,3 +1,4 @@
+//Login template when user opens login page
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
@@ -9,6 +10,7 @@
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
+                //Login Button
                 <button class="btn btn-outline-info" type="submit">Login</button>
                 <small class="text-muted ml-2">
                     <a href="{% url 'password_reset' %}">Forgot Password?</a>
@@ -16,6 +18,7 @@
             </div>
         </form>
         <div class="border-top pt-3">
+            //Sign In if User already have account
             <small class="text-muted">
                 Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
             </small>
