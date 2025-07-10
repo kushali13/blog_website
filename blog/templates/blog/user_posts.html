@@ -3,9 +3,11 @@
     <h1 class="mb-3">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
     {% for post in posts %}
         <article class="media content-section">
+            //URL for profile image of author that post blog
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
+                //url to fetch author username
               <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
             </div>
@@ -14,6 +16,7 @@
           </div>
         </article>
     {% endfor %}
+    //Pagination
     {% if is_paginated %}
 
       {% if page_obj.has_previous %}
